@@ -11,6 +11,9 @@ layout: default
     <p>{{ site.bio }}</p>
     {% if site.social %}
       <ul class="icons">
+        {% if site.social.youtube_username and site.social.youtube_username != "" %}
+          <li><a href="https://youtube.com/{{ site.social.youtube_username }}" class="icon fa-youtube"><span class="label">YouTube</span></a></li>
+        {% endif %}
         {% if site.social.twitter_username and site.social.twitter_username != "" %}
           <li><a href="https://twitter.com/{{ site.social.twitter_username }}" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
         {% endif %}
